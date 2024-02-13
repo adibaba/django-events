@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- see /docs/data.md -->
+<django-objects version="1.0">
+    <object model="events.unit" pk="1">
+        <field name="title" type="CharField">A Cloud</field>
+        <field name="order" type="SmallIntegerField">110</field>
+    </object>
+    <object model="events.unit" pk="2">
+        <field name="title" type="CharField">G Cloud</field>
+        <field name="order" type="SmallIntegerField">120</field>
+    </object>
+    <object model="events.unit" pk="3">
+        <field name="title" type="CharField">M Cloud</field>
+        <field name="order" type="SmallIntegerField">130</field>
+    </object>
+    <object model="events.unit" pk="4">
+        <field name="title" type="CharField">N Platform</field>
+        <field name="order" type="SmallIntegerField">210</field>
+    </object>
+    <object model="events.unit" pk="5">
+        <field name="title" type="CharField">Cyber Trust</field>
+        <field name="order" type="SmallIntegerField">400</field>
+    </object>
+    <object model="events.unit" pk="6">
+        <field name="title" type="CharField">Innovative Tech</field>
+        <field name="order" type="SmallIntegerField">700</field>
+    </object>
+    <!-- Note: Removed as not listed in most sources
+    <object model="events.unit" pk="7">
+        <field name="title" type="CharField">SAP</field>
+        <field name="order" type="SmallIntegerField">800</field>
+    </object>
+    -->
+    <object model="events.unit" pk="8">
+        <field name="title" type="CharField">S Platform</field>
+        <field name="order" type="SmallIntegerField">220</field>
+    </object>
+    <object model="events.unit" pk="9">
+        <field name="title" type="CharField">Creative Tech</field>
+        <field name="order" type="SmallIntegerField">300</field>
+    </object>
+    <object model="events.unit" pk="10">
+        <field name="title" type="CharField">Data Driven</field>
+        <field name="order" type="SmallIntegerField">500</field>
+    </object>
+    <object model="events.unit" pk="11">
+        <field name="title" type="CharField">Digital Impulse</field>
+        <field name="order" type="SmallIntegerField">600</field>
+    </object>
+</django-objects>

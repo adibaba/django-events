@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add log entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>admin</natural>
+            <natural>logentry</natural>
+        </field>
+        <field name="codename" type="CharField">add_logentry</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change log entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>admin</natural>
+            <natural>logentry</natural>
+        </field>
+        <field name="codename" type="CharField">change_logentry</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete log entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>admin</natural>
+            <natural>logentry</natural>
+        </field>
+        <field name="codename" type="CharField">delete_logentry</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view log entry</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>admin</natural>
+            <natural>logentry</natural>
+        </field>
+        <field name="codename" type="CharField">view_logentry</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add permission</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>permission</natural>
+        </field>
+        <field name="codename" type="CharField">add_permission</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change permission</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>permission</natural>
+        </field>
+        <field name="codename" type="CharField">change_permission</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete permission</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>permission</natural>
+        </field>
+        <field name="codename" type="CharField">delete_permission</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view permission</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>permission</natural>
+        </field>
+        <field name="codename" type="CharField">view_permission</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add group</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>group</natural>
+        </field>
+        <field name="codename" type="CharField">add_group</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change group</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>group</natural>
+        </field>
+        <field name="codename" type="CharField">change_group</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete group</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>group</natural>
+        </field>
+        <field name="codename" type="CharField">delete_group</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view group</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>group</natural>
+        </field>
+        <field name="codename" type="CharField">view_group</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add user</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>user</natural>
+        </field>
+        <field name="codename" type="CharField">add_user</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change user</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>user</natural>
+        </field>
+        <field name="codename" type="CharField">change_user</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete user</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>user</natural>
+        </field>
+        <field name="codename" type="CharField">delete_user</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view user</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>auth</natural>
+            <natural>user</natural>
+        </field>
+        <field name="codename" type="CharField">view_user</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add content type</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>contenttypes</natural>
+            <natural>contenttype</natural>
+        </field>
+        <field name="codename" type="CharField">add_contenttype</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change content type</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>contenttypes</natural>
+            <natural>contenttype</natural>
+        </field>
+        <field name="codename" type="CharField">change_contenttype</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete content type</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>contenttypes</natural>
+            <natural>contenttype</natural>
+        </field>
+        <field name="codename" type="CharField">delete_contenttype</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view content type</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>contenttypes</natural>
+            <natural>contenttype</natural>
+        </field>
+        <field name="codename" type="CharField">view_contenttype</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add session</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>sessions</natural>
+            <natural>session</natural>
+        </field>
+        <field name="codename" type="CharField">add_session</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change session</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>sessions</natural>
+            <natural>session</natural>
+        </field>
+        <field name="codename" type="CharField">change_session</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete session</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>sessions</natural>
+            <natural>session</natural>
+        </field>
+        <field name="codename" type="CharField">delete_session</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view session</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>sessions</natural>
+            <natural>session</natural>
+        </field>
+        <field name="codename" type="CharField">view_session</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add country</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>country</natural>
+        </field>
+        <field name="codename" type="CharField">add_country</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change country</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>country</natural>
+        </field>
+        <field name="codename" type="CharField">change_country</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete country</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>country</natural>
+        </field>
+        <field name="codename" type="CharField">delete_country</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view country</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>country</natural>
+        </field>
+        <field name="codename" type="CharField">view_country</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add event</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>event</natural>
+        </field>
+        <field name="codename" type="CharField">add_event</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change event</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>event</natural>
+        </field>
+        <field name="codename" type="CharField">change_event</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete event</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>event</natural>
+        </field>
+        <field name="codename" type="CharField">delete_event</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view event</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>event</natural>
+        </field>
+        <field name="codename" type="CharField">view_event</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add person</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>person</natural>
+        </field>
+        <field name="codename" type="CharField">add_person</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change person</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>person</natural>
+        </field>
+        <field name="codename" type="CharField">change_person</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete person</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>person</natural>
+        </field>
+        <field name="codename" type="CharField">delete_person</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view person</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>person</natural>
+        </field>
+        <field name="codename" type="CharField">view_person</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add level</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>Level</natural>
+        </field>
+        <field name="codename" type="CharField">add_Level</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change level</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>Level</natural>
+        </field>
+        <field name="codename" type="CharField">change_Level</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete level</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>Level</natural>
+        </field>
+        <field name="codename" type="CharField">delete_Level</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view level</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>Level</natural>
+        </field>
+        <field name="codename" type="CharField">view_Level</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add unit</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>unit</natural>
+        </field>
+        <field name="codename" type="CharField">add_unit</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change unit</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>unit</natural>
+        </field>
+        <field name="codename" type="CharField">change_unit</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete unit</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>unit</natural>
+        </field>
+        <field name="codename" type="CharField">delete_unit</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view unit</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>unit</natural>
+        </field>
+        <field name="codename" type="CharField">view_unit</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can add registration</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>registration</natural>
+        </field>
+        <field name="codename" type="CharField">add_registration</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can change registration</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>registration</natural>
+        </field>
+        <field name="codename" type="CharField">change_registration</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can delete registration</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>registration</natural>
+        </field>
+        <field name="codename" type="CharField">delete_registration</field>
+    </object>
+    <object model="auth.permission">
+        <field name="name" type="CharField">Can view registration</field>
+        <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">
+            <natural>events</natural>
+            <natural>registration</natural>
+        </field>
+        <field name="codename" type="CharField">view_registration</field>
+    </object>
+</django-objects>

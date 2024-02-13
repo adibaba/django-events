@@ -1,0 +1,198 @@
+{% extends 'events/base.html' %}
+{% load django_bootstrap5 %}
+{% load events_extras %}
+
+{% block title %}
+  {{ event.title }}
+{% endblock %}
+
+{% block content %}
+  <div class="table-responsive">
+    <table class="table table-striped table-borderless">
+      {% if event.canceled %}
+        <tr>
+          <td class="bg-poppy-lighter">State:</td>
+          <td class="bg-poppy-lighter">This event has been canceled.</td>
+        </tr>
+      {% else %}
+        {% if is_host %}
+          {% if event.published %}
+            <tr>
+              <td class="bg-aqua">State:</td>
+              <td class="bg-aqua">You published this event. It is publicly listed.</td>
+            </tr>
+          {% else %}
+            <tr>
+              <td class="bg-beige">State:</td>
+              <td class="bg-beige">You did not publish this event yet.</td>
+            </tr>
+          {% endif %}
+        {% else %}
+          {% if user_registration %}
+            {% if user_registration.canceled %}
+              <tr>
+                <td class="bg-poppy-lighter">State:</td>
+                <td class="bg-poppy-lighter">You canceled your registration.</td>
+              </tr>
+            {% else %}
+              {% if user_registration.event.leisure %}
+                <tr>
+                  <td class="bg-aqua">State:</td>
+                  <td class="bg-aqua">You are registered.</td>
+                </tr>
+              {% else %}
+                {% if user_registration.approvement_state == True %}
+                  <tr>
+                    <td class="bg-aqua">State:</td>
+                    <td class="bg-aqua">You are registered. (And your registration has been approved.)</td>
+                  </tr>
+                {% elif user_registration.approvement_state == False %}
+                  <tr>
+                    <td class="bg-poppy-lighter">State:</td>
+                    <td class="bg-poppy-lighter">The registration has been rejected.</td>
+                  </tr>
+                {% else %}
+                  <tr>
+                    <td class="bg-beige">State:</td>
+                    <td class="bg-beige">Your registration requires approval from your supervisor.</td>
+                  </tr>
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+      <tr>
+        <td>About:</td>
+        <td class="event-description">{{ event.description|markdown }}</td>
+      </tr>
+      <tr>
+        <td>Date:</td>
+        <td>
+          {{ event.date|date:'l, j. F Y' }}<br />
+          {{ event.time_begin|time:'G:i' }} – {{ event.get_end_time|time:'G:i' }} ({{ time_zone }} time)
+        </td>
+      </tr>
+      <tr>
+        <td>Presenters:</td>
+        <td>
+          {% for presenter in presenters %}
+            {% if user.is_authenticated %}
+              <a href="{{ presenter.get_absolute_url }}">{{ presenter.user.first_name }} {{ presenter.user.last_name }}</a>
+            {% else %}
+              {{ presenter.user.first_name }} {{ presenter.user.last_name }}
+            {% endif %}
+            <br />
+          {% endfor %}
+        </td>
+      </tr>
+      {% if not event.is_in_past %}
+        <tr>
+          <td>Free slots:</td>
+          <td>{{ event.get_free_slots }} out of {{ event.maximum_participants }} slots are available</td>
+        </tr>
+      {% endif %}
+      <tr>
+        <td>Working time:</td>
+        <td>
+          {% if event.leisure %}
+            Attendance is considered as <b>free time</b>
+          {% else %}
+            Attendance counts as <b>working time</b> (Participation requires approval)
+          {% endif %}
+        </td>
+      </tr>
+      {% if not event.leisure and not event.project_numbers == '' %}
+        <tr>
+          <td>Project numbers:</td>
+          <td style="white-space: pre">{{ event.project_numbers }}</td>
+        </tr>
+      {% endif %}
+    </table>
+  </div>
+
+  {% if is_host %}
+    <a href="{{ event.get_update_url }}" class="btn btn-primary">Edit Event</a>
+  {% endif %}
+
+  {% if is_host %}
+    {% comment %}User created event{% endcomment %}
+    <h2 class="pt-2">Registered participants</h2>
+    {% if registrations %}
+      {% comment %}List registrations{% endcomment %}
+      <table class="table table-striped table-hover table-borderless">
+        <thead>
+          <tr>
+            <th scope="col" class="align-middle">Person</th>
+            <th scope="col" class="align-middle">Email</th>
+            <th scope="col" class="align-middle">Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for registration in registrations %}
+            {% if not registration.canceled %}
+              {% comment %}Do not show registrations canceled by users{% endcomment %}
+              {% if event.leisure %}
+                {% comment %}"transform": required for limit stretched-link{% endcomment %}
+                <tr style="transform: rotate(0);">
+                  <td>
+                    <a href="{{ registration.person.get_absolute_url }}" class="stretched-link">{{ registration.person.user.first_name }} {{ registration.person.user.last_name }}</a>
+                  </td>
+                  <td>{{ registration.person.user.email|email_break }}</td>
+                  <td>
+                    {% if registration.person.unit %}
+                      {{ registration.person.unit }}
+                    {% else %}
+                      -
+                    {% endif %}
+                  </td>
+                </tr>
+              {% elif not registration.approvement_state == False %}
+                {% comment %}Do not show registrations in working time rejected by supervisors{% endcomment %}
+                {% comment %}"transform": required for limit stretched-link{% endcomment %}
+                <tr style="transform: rotate(0);">
+                  <td>
+                    {% if registration.approvement_state == None %}
+                      <i><a href="{{ registration.person.get_absolute_url }}" class="stretched-link">{{ registration.person.user.first_name }} {{ registration.person.user.last_name }}</a> (decision pending)</i>
+                    {% else %}
+                      <a href="{{ registration.person.get_absolute_url }}" class="stretched-link">{{ registration.person.user.first_name }} {{ registration.person.user.last_name }}</a>
+                    {% endif %}
+                  </td>
+                  <td>{{ registration.person.user.email|email_break }}</td>
+                  <td>
+                    {% if registration.person.unit %}
+                      {{ registration.person.unit }}
+                    {% else %}
+                      -
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      No registrations available.
+    {% endif %}
+  {% elif user.is_authenticated %}
+    {% if not user_registration or user_registration.canceled %}
+      {% comment %}User did not register or canceled registration{% endcomment %}
+      {% if not event.is_in_past %}
+        {% if event.get_free_slots >= 1 %}
+          <a href="{% url 'registration_create' event.pk %}" class="btn btn-primary">Attend Event</a> <br />
+        {% else %}
+          <a href="{% url 'registration_create' event.pk %}" class="btn btn-primary disabled">Attend Event</a> <br />
+        {% endif %}
+      {% endif %}
+    {% else %}
+      {% comment %}User registered{% endcomment %}
+      {% if not event.is_in_past %}
+        <a href="{% url 'registration_cancel' event.pk %}" class="btn btn-secondary">Cancel Registration</a> <br />
+      {% endif %}
+    {% endif %}
+  {% elif not event.is_in_past and event.get_free_slots >= 1 %}
+    <h2>Do you want to join?</h2>
+    <a href="{% url 'signup' %}" class="btn btn-primary">Sign up</a> &nbsp;or&nbsp; <a href="{% url 'registration_create' event.pk %}" class="btn btn-primary">Login</a>
+  {% endif %}
+{% endblock %}

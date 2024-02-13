@@ -1,0 +1,57 @@
+{% comment %}Template variables: events (Event objects){% endcomment %}
+{% comment %}Comments 'prettier-ignore' prevent the following line to be formatted, see https://github.com/junstyle/vscode-django-support#how-to-ignore-code-use-prettier-ignore-and-prettier-ignore-start{% endcomment %}
+{% load django_bootstrap5 %}
+
+{% if events %}
+  {% now 'Y-m-d' as todays_date %}
+  <table class="table table-striped table-hover table-borderless">
+    <thead>
+      <tr>
+        <th scope="col" class="align-middle">Event</th>
+        <th scope="col" class="align-middle text-center">Date</th>
+        <th scope="col" class="align-middle text-center">Free Slots</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for event in events %}
+        {% comment %}"transform": required for limit stretched-link{% endcomment %}
+        <tr style="transform: rotate(0);">
+          <td>
+            {# prettier-ignore #}
+            {% if todays_date <= event.date|date:'Y-m-d' %}
+              {% comment %}Upcoming events: Normal links{% endcomment %}
+              {% if event.canceled %}
+              <i><a href="{{ event.get_absolute_url }}" class="stretched-link">{{ event.title }}</a> &thinsp;(canceled)</i>
+              {% else %}
+              <a href="{{ event.get_absolute_url }}" class="stretched-link">{{ event.title }}</a>
+              {% endif %}
+            {% else %}
+              {% comment %}Past events: Links in grey{% endcomment %}
+              {% if event.canceled %}
+                <del>
+                  <a href="{{ event.get_absolute_url }}" class="stretched-link text-secondary">{{ event.title }}</a>
+                </del>
+              {% else %}
+                <a href="{{ event.get_absolute_url }}" class="stretched-link text-secondary">{{ event.title }}</a>
+              {% endif %}
+            {% endif %}
+          </td>
+          <td class="text-center">{{ event.date|date:'D, j. N Y' }}</td>
+          {# prettier-ignore #}
+          {% if todays_date <= event.date|date:'Y-m-d' %}
+            <td class="text-center">{{ event.get_free_slots }}</td>
+          {% else %}
+            <td class="text-center">-</td>
+          {% endif %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% if page_obj.paginator.num_pages > 1 %}
+    <div id="pagination">
+      {% bootstrap_pagination page_obj %}
+    </div>
+  {% endif %}
+{% else %}
+  <p>No events available.</p>
+{% endif %}

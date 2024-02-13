@@ -1,0 +1,23 @@
+{% extends 'events/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}
+  {% if title %}
+    {{ title }}
+  {% else %}
+    Create Event
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% if mode == 'create' %}
+      <input type="submit" value="Save Draft" />
+    {% else %}
+      {% comment %}mode == "update"{% endcomment %}
+      <input type="submit" value="Save" />
+    {% endif %}
+  </form>
+{% endblock %}

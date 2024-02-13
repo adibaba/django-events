@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- see /docs/data.md -->
+<django-objects version="1.0">
+ <object model="events.country" pk="1"><field name="name" type="CharField">Belgium</field></object>
+ <object model="events.country" pk="2"><field name="name" type="CharField">Denmark</field></object>
+ <object model="events.country" pk="3"><field name="name" type="CharField">France</field></object>
+ <object model="events.country" pk="4"><field name="name" type="CharField">Germany</field></object>
+ <object model="events.country" pk="5"><field name="name" type="CharField">Luxembourg</field></object>
+ <object model="events.country" pk="6"><field name="name" type="CharField">Mexico</field></object>
+ <object model="events.country" pk="7"><field name="name" type="CharField">Netherlands</field></object>
+ <object model="events.country" pk="8"><field name="name" type="CharField">Norway</field></object>
+ <object model="events.country" pk="9"><field name="name" type="CharField">Portugal</field></object>
+ <object model="events.country" pk="10"><field name="name" type="CharField">Saudi Arabia</field></object>
+ <object model="events.country" pk="11"><field name="name" type="CharField">Serbia</field></object>
+ <object model="events.country" pk="12"><field name="name" type="CharField">Spain</field></object>
+ <object model="events.country" pk="13"><field name="name" type="CharField">Sweden</field></object>
+ <object model="events.country" pk="14"><field name="name" type="CharField">Switzerland</field></object>
+ <object model="events.country" pk="15"><field name="name" type="CharField">Tunisia</field></object>
+ <object model="events.country" pk="16"><field name="name" type="CharField">Turkey</field></object>
+ <object model="events.country" pk="17"><field name="name" type="CharField">United Kingdom</field></object>
+
+ <object model="events.country" pk="18"><field name="name" type="CharField">Austria</field></object>
+ <object model="events.country" pk="19"><field name="name" type="CharField">Czech Republic</field></object>
+ <object model="events.country" pk="21"><field name="name" type="CharField">Indonesia</field></object>
+ <object model="events.country" pk="22"><field name="name" type="CharField">Italy</field></object>
+ <object model="events.country" pk="20"><field name="name" type="CharField">Lithuania</field></object>
+ <object model="events.country" pk="23"><field name="name" type="CharField">Poland</field></object>
+ <object model="events.country" pk="24"><field name="name" type="CharField">Singapore</field></object>
+ <object model="events.country" pk="25"><field name="name" type="CharField">Slovakia</field></object>
+ <object model="events.country" pk="26"><field name="name" type="CharField">United Arab Emirates</field></object>
+</django-objects>
+
+
+
+

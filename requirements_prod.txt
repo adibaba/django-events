@@ -1,0 +1,7 @@
+# General
+Django==4.2.5
+django-bootstrap5==23.3
+Markdown==3.5
+
+# Production
+psycopg2-binary==2.9.9

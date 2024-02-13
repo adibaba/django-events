@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">admin</field>
+        <field name="model" type="CharField">logentry</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">auth</field>
+        <field name="model" type="CharField">permission</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">auth</field>
+        <field name="model" type="CharField">group</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">auth</field>
+        <field name="model" type="CharField">user</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">contenttypes</field>
+        <field name="model" type="CharField">contenttype</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">sessions</field>
+        <field name="model" type="CharField">session</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">events</field>
+        <field name="model" type="CharField">country</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">events</field>
+        <field name="model" type="CharField">event</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">events</field>
+        <field name="model" type="CharField">person</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">events</field>
+        <field name="model" type="CharField">Level</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">events</field>
+        <field name="model" type="CharField">unit</field>
+    </object>
+    <object model="contenttypes.contenttype">
+        <field name="app_label" type="CharField">events</field>
+        <field name="model" type="CharField">registration</field>
+    </object>
+</django-objects>

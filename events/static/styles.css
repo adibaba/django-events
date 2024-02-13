@@ -1,0 +1,25 @@
+/* Styles in addition to template */
+
+/* No linebreak after event description text */
+.event-description p {
+    display: inline
+}
+
+.bg-aqua {
+    background-color: #d7ebe7 !important;
+}
+
+.bg-poppy-lighter {
+    background-color: #fddade !important;
+}
+
+.bg-beige {
+    background-color: #efeadc !important;
+}
+
+/* No background-color, login form input */
+/* https://stackoverflow.com/a/68240841 */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s;
+}

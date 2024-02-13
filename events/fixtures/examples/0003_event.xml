@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="events.event" pk="1">
+        <field name="title" type="CharField">Lisp is leisure</field>
+        <field name="description" type="TextField">Feel free to enjoy.</field>
+        <field name="date" type="DateField">2030-01-01</field>
+        <field name="time_begin" type="TimeField">08:00:00</field>
+        <field name="duration" type="PositiveSmallIntegerField">60</field>
+        <field name="maximum_participants" type="IntegerField">3</field>
+        <field name="presenters" rel="ManyToManyRel" to="events.person">
+            <object pk="2"></object>
+        </field>
+        <field name="published" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="leisure" type="BooleanField">True</field>
+    </object>
+    <object model="events.event" pk="2">
+        <field name="title" type="CharField">Web works</field>
+        <field name="description" type="TextField">[w3.org](https://www.w3.org/)</field>
+        <field name="project_numbers" type="TextField">123123 (Django France)
+123456 (Django GmbH, use the task: 4711)</field>
+        <field name="date" type="DateField">2030-01-01</field>
+        <field name="time_begin" type="TimeField">09:00:00</field>
+        <field name="duration" type="PositiveSmallIntegerField">60</field>
+        <field name="maximum_participants" type="IntegerField">3</field>
+
+        <field name="presenters" rel="ManyToManyRel" to="events.person">
+            <object pk="2"></object>
+        </field>
+        <field name="published" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="leisure" type="BooleanField">False</field>
+    </object>
+    <object model="events.event" pk="3">
+        <field name="title" type="CharField">C++ Canceled</field>
+        <field name="description" type="TextField">C++ will not take place.</field>
+        <field name="date" type="DateField">2030-01-02</field>
+        <field name="time_begin" type="TimeField">10:00:00</field>
+        <field name="duration" type="PositiveSmallIntegerField">60</field>
+        <field name="maximum_participants" type="IntegerField">3</field>
+        <field name="presenters" rel="ManyToManyRel" to="events.person">
+            <object pk="2"></object>
+        </field>
+        <field name="published" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">True</field>
+        <field name="leisure" type="BooleanField">False</field>
+    </object>
+    <object model="events.event" pk="4">
+        <field name="title" type="CharField">Prolog in the past</field>
+        <field name="description" type="TextField">A brief history.</field>
+        <field name="date" type="DateField">2023-01-01</field>
+        <field name="time_begin" type="TimeField">09:00:00</field>
+        <field name="duration" type="PositiveSmallIntegerField">60</field>
+        <field name="maximum_participants" type="IntegerField">3</field>
+        <field name="presenters" rel="ManyToManyRel" to="events.person">
+            <object pk="2"></object>
+        </field>
+        <field name="published" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="leisure" type="BooleanField">False</field>
+    </object>
+    <object model="events.event" pk="5">
+        <field name="title" type="CharField">Python Publishing</field>
+        <field name="description" type="TextField">A talk about snakes.</field>
+        <field name="date" type="DateField">2030-01-01</field>
+        <field name="time_begin" type="TimeField">09:30:00</field>
+        <field name="duration" type="PositiveSmallIntegerField">60</field>
+        <field name="maximum_participants" type="IntegerField">3</field>
+        <field name="presenters" rel="ManyToManyRel" to="events.person">
+            <object pk="2"></object>
+        </field>
+        <field name="published" type="BooleanField">False</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="leisure" type="BooleanField">False</field>
+    </object>
+</django-objects>

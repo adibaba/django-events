@@ -1,0 +1,125 @@
+{% extends 'events/base.html' %}
+{% load django_bootstrap5 %}
+{% load events_extras %}
+
+{% block title %}
+  Support
+{% endblock %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    {% if not only_leisure %}
+      <h2>Moderators</h2>
+      <p>
+        Contact a moderator if you want to <b>change your supervisor</b>.
+      </p>
+      <table class="table table-striped table-hover table-borderless">
+        <thead>
+          <tr>
+            <th scope="col" class="align-middle">Name</th>
+            <th scope="col" class="align-middle" width="30%">Unit</th>
+            <th scope="col" class="align-middle" width="30%">Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in persons %}
+            {% if person.user|has_group:'moderators' %}
+              {% comment %}"transform": required for limit stretched-link{% endcomment %}
+              <tr style="transform: rotate(0);">
+                <td>
+                  <a href="{{ person.get_absolute_url }}" class="stretched-link">{{ person.user.first_name }} {{ person.user.last_name }}</a>
+                </td>
+                <td>
+                  {% if person.unit %}
+                    {{ person.unit }}
+                  {% else %}
+                    -
+                  {% endif %}
+                </td>
+                <td>
+                  {% if person.country %}
+                    {{ person.country }}
+                  {% else %}
+                    -
+                  {% endif %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+
+    <h2>Superusers</h2>
+    <p>
+      Contact a superuser if you want to <b>change any data</b>. <br />That could be a missing country or a registration you can not change.
+    </p>
+    <table class="table table-striped table-hover table-borderless">
+      <thead>
+        <tr>
+          <th scope="col" class="align-middle">Name</th>
+          <th scope="col" class="align-middle" width="30%">Unit</th>
+          <th scope="col" class="align-middle" width="30%">Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for person in persons %}
+          {% if person.user.is_superuser %}
+            {% comment %}"transform": required for limit stretched-link{% endcomment %}
+            <tr style="transform: rotate(0);">
+              <td>
+                <a href="{{ person.get_absolute_url }}" class="stretched-link">{{ person.user.first_name }} {{ person.user.last_name }}</a>
+              </td>
+              <td>
+                {% if person.unit %}
+                  {{ person.unit }}
+                {% else %}
+                  -
+                {% endif %}
+              </td>
+              <td>
+                {% if person.country %}
+                  {{ person.country }}
+                {% else %}
+                  -
+                {% endif %}
+              </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  <h2>Administrator</h2>
+  <p>Contact the administrator if you have a request about this website.</p>
+  <table class="table table-striped table-hover table-borderless">
+    <thead>
+      <tr>
+        <th scope="col" class="align-middle">Name</th>
+        <th scope="col" class="align-middle" width="60%">Email address</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% comment %}"transform": required for limit stretched-link{% endcomment %}
+      <tr style="transform: rotate(0);">
+        <td>
+          {% setting 'ADMINISTRATOR_NAME' %}
+        </td>
+        <td>
+          {% setting 'TITLE' as email_subject %}
+          <a href="mailto:{% setting 'ADMINISTRATOR_EMAIL' %}?subject={{ email_subject|quote_url_parameter }}:%20Request" class="stretched-link">{% setting 'ADMINISTRATOR_EMAIL' %}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Developers</h2>
+  <p>
+    If you have a suggestion for improving the features of this website, you can
+    <a href="https://github.com/adibaba/django-events/-/issues" target="_blank">create an issue</a>
+    or
+    <a href="https://github.com/adibaba/django-events/-/project_members" target="_blank">contact the developers</a>. <br />
+    (The links may require a VPN connection and an account on git.django.de)
+  </p>
+{% endblock %}

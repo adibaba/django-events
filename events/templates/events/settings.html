@@ -1,0 +1,27 @@
+{% extends 'events/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}
+  Settings
+{% endblock %}
+
+{% block content %}
+  <form method="post" action="{% url 'settings' %}">
+    {% csrf_token %}
+    {% bootstrap_form user_form %}
+    {% bootstrap_form person_form %}
+    <button type="submit">Save</button>
+  </form>
+
+  <h2>Support</h2>
+  <ul>
+    <li>
+      If your <b>country</b>, <b>level</b> or <b>unit</b> is not available in the lists, please contact a <a href="{% url 'person_list_support' %}">superuser</a>.
+    </li>
+    {% if not only_leisure %}
+      <li>
+        If your <b>supervisor</b> is not set, please contact a <a href="{% url 'person_list_support' %}">moderator</a>.
+      </li>
+    {% endif %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,23 @@
+# https://pre-commit.com/
+repos:
+-   repo: https://github.com/psf/black
+    # https://black.readthedocs.io/en/stable/guides/using_black_with_other_tools.html#flake8
+    rev: 23.9.1
+    hooks:
+    -   id: black
+        args: [--line-length=120]
+-   repo: https://github.com/pycqa/flake8
+    # https://flake8.pycqa.org/en/stable/user/using-hooks.html
+    rev: 6.1.0
+    hooks:
+    -   id: flake8
+        args: [--config=.flake8]
+-   repo: local
+    # https://stackoverflow.com/a/66273212
+    hooks:
+    -   id: django-test
+        name: django-test
+        entry: python manage.py test
+        always_run: true
+        pass_filenames: false
+        language: system

@@ -1,0 +1,22 @@
+{% extends 'events/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}
+  {% if title %}
+    {{ title }}
+  {% else %}
+    Events
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% include 'events/includes/event_table.html' %}
+
+  {% if mode == 'past' %}
+    <a href="{% url 'event_list_upcoming' %}" class="btn btn-primary">Show Upcoming Events</a> <br />
+  {% elif mode == 'upcoming' %}
+    <a href="{% url 'event_list_past' %}" class="btn btn-primary">Show Past Events</a> <br />
+  {% elif mode == 'host' %}
+    <a href="{% url 'event_create' %}" class="btn btn-primary">Create a new Event</a> <br />
+  {% endif %}
+{% endblock %}

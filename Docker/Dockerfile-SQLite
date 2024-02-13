@@ -1,0 +1,16 @@
+FROM python:3.11.4-slim-bookworm
+
+WORKDIR /srv
+
+# Force the stdout and stderr streams to be unbuffered
+ENV PYTHONUNBUFFERED 1
+
+RUN pip install --upgrade pip
+COPY requirements_dev.txt .
+RUN pip install -r requirements_dev.txt
+
+COPY . .
+
+RUN python manage.py migrate
+
+EXPOSE 8000

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- see /docs/data.md -->
+<django-objects version="1.0">
+    <object model="events.Level" pk="1">
+        <field name="title" type="CharField">Consultant</field>
+        <field name="order" type="SmallIntegerField">200</field>
+    </object>
+    <object model="events.Level" pk="2">
+        <field name="title" type="CharField">Senior Consultant</field>
+        <field name="order" type="SmallIntegerField">300</field>
+    </object>
+    <object model="events.Level" pk="3">
+        <field name="title" type="CharField">Lead Consultant</field>
+        <field name="order" type="SmallIntegerField">400</field>
+    </object>
+    <!-- Same level: Principal Consultant/Principal Advisor -->
+    <object model="events.Level" pk="4">
+        <field name="title" type="CharField">Principal Consultant</field>
+        <field name="order" type="SmallIntegerField">510</field>
+    </object>
+    <object model="events.Level" pk="5">
+        <field name="title" type="CharField">Principal Advisor</field>
+        <field name="order" type="SmallIntegerField">520</field>
+    </object>
+    <!-- Same level: Expert/Director -->
+    <object model="events.Level" pk="6">
+        <field name="title" type="CharField">Expert</field>
+        <field name="order" type="SmallIntegerField">710</field>
+    </object>
+    <object model="events.Level" pk="7">
+        <field name="title" type="CharField">Director</field>
+        <field name="order" type="SmallIntegerField">720</field>
+    </object>
+    <!-- Note: Digital Impulse only
+    <object model="events.Level" pk="9">
+        <field name="title" type="CharField">Partner</field>
+        <field name="order" type="SmallIntegerField">900</field>
+    </object>
+    -->
+</django-objects>

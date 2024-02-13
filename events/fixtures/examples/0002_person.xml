@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="events.person" pk="1">
+        <field name="user" rel="OneToOneRel" to="auth.user">
+            <natural>aadmin</natural>
+        </field>
+        <field name="country" rel="ManyToOneRel" to="events.country">4</field>
+        <field name="level" rel="ManyToOneRel" to="events.Level">1</field>
+        <field name="unit" rel="ManyToOneRel" to="events.unit">6</field>
+        <field name="supervisor" rel="ManyToOneRel" to="events.person">7</field>
+        <field name="is_supervisor" type="BooleanField">False</field>
+        <field name="representatives" rel="ManyToManyRel" to="events.person"></field>
+    </object>
+    <object model="events.person" pk="2">
+        <field name="user" rel="OneToOneRel" to="auth.user">
+            <natural>cconsultant</natural>
+        </field>
+        <field name="country" rel="ManyToOneRel" to="events.country">4</field>
+        <field name="level" rel="ManyToOneRel" to="events.Level">1</field>
+        <field name="unit" rel="ManyToOneRel" to="events.unit">6</field>
+        <field name="supervisor" rel="ManyToOneRel" to="events.person">7</field>
+        <field name="is_supervisor" type="BooleanField">False</field>
+        <field name="representatives" rel="ManyToManyRel" to="events.person"></field>
+    </object>
+    <object model="events.person" pk="3">
+        <field name="user" rel="OneToOneRel" to="auth.user">
+            <natural>ffrance</natural>
+        </field>
+        <field name="country" rel="ManyToOneRel" to="events.country">3</field>
+        <field name="level" rel="ManyToOneRel" to="events.Level">1</field>
+        <field name="unit" rel="ManyToOneRel" to="events.unit">6</field>
+        <field name="supervisor" rel="ManyToOneRel" to="events.person">7</field>
+        <field name="is_supervisor" type="BooleanField">False</field>
+        <field name="representatives" rel="ManyToManyRel" to="events.person"></field>
+    </object>
+    <object model="events.person" pk="4">
+        <field name="user" rel="OneToOneRel" to="auth.user">
+            <natural>ggcloud</natural>
+        </field>
+        <field name="country" rel="ManyToOneRel" to="events.country">4</field>
+        <field name="level" rel="ManyToOneRel" to="events.Level">1</field>
+        <field name="unit" rel="ManyToOneRel" to="events.unit">2</field>
+        <field name="supervisor" rel="ManyToOneRel" to="events.person">7</field>
+        <field name="is_supervisor" type="BooleanField">False</field>
+        <field name="representatives" rel="ManyToManyRel" to="events.person"></field>
+    </object>
+    <object model="events.person" pk="5">
+        <field name="user" rel="OneToOneRel" to="auth.user">
+            <natural>mmoderator</natural>
+        </field>
+        <field name="country" rel="ManyToOneRel" to="events.country">4</field>
+        <field name="level" rel="ManyToOneRel" to="events.Level">1</field>
+        <field name="unit" rel="ManyToOneRel" to="events.unit">6</field>
+        <field name="supervisor" rel="ManyToOneRel" to="events.person">7</field>
+        <field name="is_supervisor" type="BooleanField">False</field>
+        <field name="representatives" rel="ManyToManyRel" to="events.person"></field>
+    </object>
+    <object model="events.person" pk="6">
+        <field name="user" rel="OneToOneRel" to="auth.user">
+            <natural>nnplatform</natural>
+        </field>
+        <field name="country" rel="ManyToOneRel" to="events.country">4</field>
+        <field name="level" rel="ManyToOneRel" to="events.Level">1</field>
+        <field name="unit" rel="ManyToOneRel" to="events.unit">4</field>
+        <field name="supervisor" rel="ManyToOneRel" to="events.person">7</field>
+        <field name="is_supervisor" type="BooleanField">False</field>
+        <field name="representatives" rel="ManyToManyRel" to="events.person"></field>
+    </object>
+    <object model="events.person" pk="7">
+        <field name="user" rel="OneToOneRel" to="auth.user">
+            <natural>ssupervisor</natural>
+        </field>
+        <field name="country" rel="ManyToOneRel" to="events.country">4</field>
+        <field name="level" rel="ManyToOneRel" to="events.Level">7</field>
+        <field name="unit" rel="ManyToOneRel" to="events.unit">6</field>
+        <field name="supervisor" rel="ManyToOneRel" to="events.person">
+            <None></None>
+        </field>
+        <field name="is_supervisor" type="BooleanField">True</field>
+        <field name="representatives" rel="ManyToManyRel" to="events.person">
+            <object pk="1"></object>
+            <object pk="2"></object>
+        </field>
+    </object>
+    <object model="events.person" pk="8">
+        <field name="user" rel="OneToOneRel" to="auth.user">
+            <natural>ddigital</natural>
+        </field>
+        <field name="country" rel="ManyToOneRel" to="events.country">4</field>
+        <field name="level" rel="ManyToOneRel" to="events.Level">1</field>
+        <field name="unit" rel="ManyToOneRel" to="events.unit">11</field>
+        <field name="supervisor" rel="ManyToOneRel" to="events.person">7</field>
+        <field name="is_supervisor" type="BooleanField">False</field>
+        <field name="representatives" rel="ManyToManyRel" to="events.person"></field>
+    </object>
+</django-objects>

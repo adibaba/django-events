@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="events.registration" pk="1">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">3</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">1</field>
+    </object>
+    <object model="events.registration" pk="2">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">3</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">2</field>
+    </object>
+    <object model="events.registration" pk="3">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">3</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">3</field>
+    </object>
+    <object model="events.registration" pk="4">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">3</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">4</field>
+    </object>
+    <object model="events.registration" pk="5">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">3</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">5</field>
+    </object>
+    <object model="events.registration" pk="6">
+        <field name="approvement_state" type="BooleanField">False</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">4</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">1</field>
+    </object>
+    <object model="events.registration" pk="7">
+        <field name="approvement_state" type="BooleanField">False</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">4</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">2</field>
+    </object>
+    <object model="events.registration" pk="8">
+        <field name="approvement_state" type="BooleanField">False</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">4</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">3</field>
+    </object>
+    <object model="events.registration" pk="9">
+        <field name="approvement_state" type="BooleanField">False</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">4</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">4</field>
+    </object>
+    <object model="events.registration" pk="10">
+        <field name="approvement_state" type="BooleanField">False</field>
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">4</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">5</field>
+    </object>
+    <object model="events.registration" pk="11">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">True</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">6</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">1</field>
+    </object>
+    <object model="events.registration" pk="12">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">True</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">6</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">2</field>
+    </object>
+    <object model="events.registration" pk="13">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">True</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">6</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">3</field>
+    </object>
+    <object model="events.registration" pk="14">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">True</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">6</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">4</field>
+    </object>
+    <object model="events.registration" pk="15">
+        <field name="approvement_state" type="BooleanField">True</field>
+        <field name="canceled" type="BooleanField">True</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">6</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">5</field>
+    </object>
+    <object model="events.registration" pk="16">
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">8</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">1</field>
+    </object>
+    <object model="events.registration" pk="17">
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">8</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">2</field>
+    </object>
+    <object model="events.registration" pk="18">
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">8</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">3</field>
+    </object>
+    <object model="events.registration" pk="19">
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">8</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">4</field>
+    </object>
+    <object model="events.registration" pk="20">
+        <field name="canceled" type="BooleanField">False</field>
+        <field name="person" rel="ManyToOneRel" to="events.person">8</field>
+        <field name="event" rel="ManyToOneRel" to="events.event">5</field>
+    </object>
+</django-objects>

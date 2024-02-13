@@ -1,0 +1,14 @@
+{% extends 'events/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}
+  Sign up
+{% endblock %}
+
+{% block content %}
+  <form action="{% url 'signup' %}" method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="Sign up" />
+  </form>
+{% endblock %}
