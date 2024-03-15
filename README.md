@@ -36,3 +36,11 @@ Events in working time have to be approved from superiors or their representativ
   You will be prompted to enter a password. You can also use a different username and email.
 - To start the development web server at [127.0.0.1:8000](http://127.0.0.1:8000/):  
   `python manage.py runserver 8000`
+
+## Screenshots
+
+![](docs/images/screenshot-001-upcoming.png)
+
+![](docs/images/screenshot-002-organization.png)
+
+![](docs/images/screenshot-003-approvals.png)
