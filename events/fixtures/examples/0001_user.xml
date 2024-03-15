@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <django-objects version="1.0">
     <object model="auth.user">
-        <field name="password" type="CharField">pbkdf2_sha256$600000$qGFTNRpm6Jsq4ckJAIauVS$siYH4fvXnpuAKTegeV0XwawnTynfah/405lYkOjH+bk=</field>
+        <field name="password" type="CharField">pbkdf2_sha256$600000$dytsQtxB20AKyNikQzT3Zz$SvA0YCEfqTMRwqyB+XIqrc7Ng1+hImn8nBCWLHc43Is=</field>
         <field name="last_login" type="DateTimeField">2023-10-13T10:32:51.698064+00:00</field>
         <field name="is_superuser" type="BooleanField">True</field>
         <field name="username" type="CharField">aadmin</field>
@@ -15,7 +15,7 @@
         <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
     </object>
     <object model="auth.user">
-        <field name="password" type="CharField">pbkdf2_sha256$600000$qGFTNRpm6Jsq4ckJAIauVS$siYH4fvXnpuAKTegeV0XwawnTynfah/405lYkOjH+bk=</field>
+        <field name="password" type="CharField">pbkdf2_sha256$600000$dytsQtxB20AKyNikQzT3Zz$SvA0YCEfqTMRwqyB+XIqrc7Ng1+hImn8nBCWLHc43Is=</field>
         <field name="last_login" type="DateTimeField">
             <None></None>
         </field>
@@ -31,7 +31,7 @@
         <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
     </object>
     <object model="auth.user">
-        <field name="password" type="CharField">pbkdf2_sha256$600000$qGFTNRpm6Jsq4ckJAIauVS$siYH4fvXnpuAKTegeV0XwawnTynfah/405lYkOjH+bk=</field>
+        <field name="password" type="CharField">pbkdf2_sha256$600000$dytsQtxB20AKyNikQzT3Zz$SvA0YCEfqTMRwqyB+XIqrc7Ng1+hImn8nBCWLHc43Is=</field>
         <field name="last_login" type="DateTimeField">
             <None></None>
         </field>
@@ -47,7 +47,7 @@
         <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
     </object>
     <object model="auth.user">
-        <field name="password" type="CharField">pbkdf2_sha256$600000$qGFTNRpm6Jsq4ckJAIauVS$siYH4fvXnpuAKTegeV0XwawnTynfah/405lYkOjH+bk=</field>
+        <field name="password" type="CharField">pbkdf2_sha256$600000$dytsQtxB20AKyNikQzT3Zz$SvA0YCEfqTMRwqyB+XIqrc7Ng1+hImn8nBCWLHc43Is=</field>
         <field name="last_login" type="DateTimeField">
             <None></None>
         </field>
@@ -63,7 +63,7 @@
         <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
     </object>
     <object model="auth.user">
-        <field name="password" type="CharField">pbkdf2_sha256$600000$qGFTNRpm6Jsq4ckJAIauVS$siYH4fvXnpuAKTegeV0XwawnTynfah/405lYkOjH+bk=</field>
+        <field name="password" type="CharField">pbkdf2_sha256$600000$dytsQtxB20AKyNikQzT3Zz$SvA0YCEfqTMRwqyB+XIqrc7Ng1+hImn8nBCWLHc43Is=</field>
         <field name="last_login" type="DateTimeField">
             <None></None>
         </field>
@@ -83,7 +83,7 @@
         <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
     </object>
     <object model="auth.user">
-        <field name="password" type="CharField">pbkdf2_sha256$600000$qGFTNRpm6Jsq4ckJAIauVS$siYH4fvXnpuAKTegeV0XwawnTynfah/405lYkOjH+bk=</field>
+        <field name="password" type="CharField">pbkdf2_sha256$600000$dytsQtxB20AKyNikQzT3Zz$SvA0YCEfqTMRwqyB+XIqrc7Ng1+hImn8nBCWLHc43Is=</field>
         <field name="last_login" type="DateTimeField">
             <None></None>
         </field>
@@ -99,7 +99,7 @@
         <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
     </object>
     <object model="auth.user">
-        <field name="password" type="CharField">pbkdf2_sha256$600000$qGFTNRpm6Jsq4ckJAIauVS$siYH4fvXnpuAKTegeV0XwawnTynfah/405lYkOjH+bk=</field>
+        <field name="password" type="CharField">pbkdf2_sha256$600000$dytsQtxB20AKyNikQzT3Zz$SvA0YCEfqTMRwqyB+XIqrc7Ng1+hImn8nBCWLHc43Is=</field>
         <field name="last_login" type="DateTimeField">
             <None></None>
         </field>
@@ -115,7 +115,7 @@
         <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
     </object>
     <object model="auth.user">
-        <field name="password" type="CharField">pbkdf2_sha256$600000$qGFTNRpm6Jsq4ckJAIauVS$siYH4fvXnpuAKTegeV0XwawnTynfah/405lYkOjH+bk=</field>
+        <field name="password" type="CharField">pbkdf2_sha256$600000$dytsQtxB20AKyNikQzT3Zz$SvA0YCEfqTMRwqyB+XIqrc7Ng1+hImn8nBCWLHc43Is=</field>
         <field name="last_login" type="DateTimeField">
             <None></None>
         </field>
