@@ -16,11 +16,7 @@ The frontend is based on *Bootstrap*, which is included by *django-bootstrap5* a
 
 ## Bootstrap theme based on Django colors
 
-- Theme in [branch bootstrap](https://github.com/adibaba/django-events/-/tree/bootstrap)
+- Theme in [branch bootstrap](https://github.com/adibaba/django-events/tree/bootstrap)
 - Based on:
   - <https://getbootstrap.com/docs/5.3/getting-started/webpack/>
   - <https://github.com/twbs/examples/tree/main/webpack>
-
-## Colors
-
-- See: [Template colors](https://github.com/adibaba/django-events/-/tree/bootstrap/colors#colors) in branch `bootstrap`
