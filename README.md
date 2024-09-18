@@ -1,13 +1,10 @@
 # Django Event Management
 
-This repository is a proof of concept of a learning project.  
+This **repository** is a proof of concept of a learning project.
 It is an edited and anonymized version to provide a public release.
 
-This event management system is a proof of concept of a learning project.  
-It basically lists upcoming and past events.
-
-Each event has basic properties like title, description (using Markdown), date, duration and maximum of participants. Additionally, users can specify if an event has been published (or is just a draft), if it was canceled and if it will be in leisure time.
-
+This **event management system** basically lists upcoming and past events.
+Each **event** has basic properties like title, description (using Markdown), date, duration and maximum of participants. Additionally, users can specify if an event has been published (or is just a draft), if it was canceled and if it will be in leisure time.
 Events in working time have to be approved from superiors or their representatives. Working time events come along with related project numbers for later accounting.
 
 ## Documentation
